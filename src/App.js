@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
-import {LocaleContext} from './locale-context'
-import SomeContainer from "./SomeContainer"
+import React, { Component } from "react";
+import { LocaleContext } from "./locale-context";
+import SomeContainer from "./SomeContainer";
 
-class App extends Component {
-  constructor(props){
-    super(props)
+export default class App extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      preferredLocale: 'en'
-    }
+      preferredLocale: "en"
+    };
   }
-  changeLanguage = ({currentTarget:{id}}) => {
+  changeLanguage = ({ currentTarget: { id } }) => {
     this.setState({
       preferredLocale: id
-    })
-  }
+    });
+  };
   render() {
     return (
       <LocaleContext.Provider value={this.state.preferredLocale}>
-      <SomeContainer changeLanguage={this.changeLanguage}/>
+        <SomeContainer changeLanguage={this.changeLanguage} />
       </LocaleContext.Provider>
     );
   }
 }
-
-export default App;

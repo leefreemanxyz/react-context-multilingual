@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { LocaleContext } from "../locale-context";
 
 import en from "./en.json";
 import es from "./es.json";
 import nl from "./nl.json";
 
-export default class Translate extends Component {
+export default class Translate extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {

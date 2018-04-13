@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 
-export default class LanguagePicker extends Component {
+export default class LanguagePicker extends PureComponent {
     render(){
         const {changeLanguage} = this.props
         return (

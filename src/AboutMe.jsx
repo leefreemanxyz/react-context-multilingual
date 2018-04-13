@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import  Translate  from './locales/Translate';
 
 const styles = {
@@ -8,7 +8,7 @@ const styles = {
     }
 }
 
-export default class AboutMe extends Component {
+export default class AboutMe extends PureComponent {
     render(){
         return (
             <div style={styles.aboutMe}>
